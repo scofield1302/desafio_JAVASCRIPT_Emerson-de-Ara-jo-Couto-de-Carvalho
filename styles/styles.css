@@ -1,0 +1,420 @@
+body {
+    /*Estilizações gerais para todas as páginas*/
+    margin: 0;
+    padding-bottom: 70px;
+    padding-top: 10px;
+}
+/*Importação de fontes externas*/
+@import url('https://fonts.googleapis.com/css2?family=Bellota+Text:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+
+/*Definição das variáveis que o projeto utilizará no CSS, para que não precise redefinir em todos os blocos, quando alteradas.*/
+:root {
+    --fontSize_texts: 12px;
+    --fontSize_links: 14px;
+    --fontSize_tittles: 44px;
+    --fontColor: #000000;
+    --fontFamily: "Bellota Text", sans-serif;
+    --fontColor_Darkblue: #000D5B;
+    --fontColor_Lightblue: #1435F4;
+}
+
+header{
+    /*Página: Todas
+    Definições de estilo na tag header (ou seja, no cabeçalho em si) */
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    height: 50px;
+    align-items: center;
+    padding-bottom: 20px;
+    height: 50px;
+    background-color: aliceblue;
+}
+
+.header__links{
+    /*Página: Todas
+    Definições de estilo na class header__links (section com os Links dispostos no cabeçalho, exceto a logo da Ford) */
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    justify-content: center;
+    padding-right: 120px;
+}
+
+.link_header {
+    /*Página: Todas
+    Definições de estilo na class link_header (os Links dispostos no cabeçalho) */
+    font-size: var(--fontSize_links);
+    color: var(--fontColor_Lightblue);
+    text-decoration: none;
+}
+
+footer{
+    /*Página: Todas
+    Classe que estiliza a tag footer (ou seja, o rodapé da página)*/
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 99%;
+    background-color: var(--fontColor_Darkblue);
+    height: 50px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding-left: 10px;    
+    margin-top: 20px;
+}
+
+.footer__socialnetwork{
+    /*Página: Todas
+    Classe que estiliza a section que contém os ícones das redes sociais, que fica no rodapé*/
+    height: 35px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo_ford{
+    /*Página: Todas
+    logo da Ford, present no header e footer*/
+    width: 50px;
+    margin-right: 1%;
+    margin-left: 1%;
+
+}
+
+                        /*         ITENS NA PÁGINA HOME   */
+
+.produto_central{
+    /*Página: Home
+    Classe que estilizará a tag main, na página home. Nesta tag, estão adicionadas a foto do veículo de lançamento e uma chamada para ação.*/
+    margin-top: 40px;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    justify-content: center;
+}
+
+.main__image{
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+    width: 90%;
+}
+
+
+
+.product_description {
+    /*Página: Home
+    Classe para estilizar o texto de chamada para ação, que fica na página home, na tag main, abaixo da imagem do carro de lançamento */
+    text-decoration: none;
+    color: var(--fontColor);
+    margin-top: 10px;
+    font-size: 18px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: var(--fontFamily);
+    font-weight: 700;
+}
+
+
+                        /*         ITENS NA PÁGINA LANÇAMENTO   */
+
+
+.main__product{
+    /*Página: Lançamento
+    Na página lançamento, foi criada uma tag div e estilizada com esta classe. Na Div em questão, é inserido o vídeo com fundo da div de outra cor, para dar destaque e tirar o fundo branco.*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #000D5B;
+    min-height: 300px;
+    max-height: 700px;
+}
+
+iframe{
+    /*Página: Lançamento
+    Estilizações no video do youtube que é motrado na página lançamento*/
+    margin-top: 60px;
+    width: 80%;
+    min-height: 400px;
+    padding: 5% 10% 5% 10%;
+    
+}
+
+.groups_row{
+    /*Página: Lançamento
+    Classe criada para facilitar os grupos que são exibidos em formato de row, como por exemplo o grupo (div) que de um lado tem o checkbox e do outro (à sua direita) tem um modelo e breve descrição do veículo.*/
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+       
+}
+
+.groups_column{
+    /*Página: Lançamento
+    Assim como a classe groups_row, esta classe foi criada para facilitar a exibição dos grupos que são exibidos em formato de coluna, como por exemplo o grupo (div) que exibe primeiro a div que tem o vídeo do lançamento, depois a div que tem os veículos dispostos um ao lado do outro.*/
+    display: flex;
+    flex-direction: column;
+    align-items:first center;
+    justify-content: flex-start;
+    margin-left:10px;
+}
+
+.model_car{
+    /*Página: Lançamento
+    Classe criada para estilizar a fonte que exibe o nome do modelo do veículo, ao lado do checkbox*/
+    color: var(--fontColor_Lightblue);
+    font-size: 20px;
+}
+
+.info_car{
+    /*Página: Lançamento
+    Classe criada para estilizar a fonte que exibe a breve descrição do modelo do veículo, ao lado do checkbox e embaixo do nome do modelo do veículo*/
+    font-size: 14px;
+}
+
+.info_car2{
+    /*Página: Lançamento
+    Classe criada para estilizar a fonte que exibe a breve descrição do veículo de lançamento, embaixo do vídeo promocional*/
+    font-size: 16px;
+    color: white;
+    padding: 0 10% 2% 10%;
+    text-align: justify;
+    margin-top: -10px;
+}
+
+.bttn_compare_cars{
+    /*Página: Lançamento
+    Classe criada para estilizar o botão (que foi construído com tag âncora) que compara os modelos do veículos selecionados através dos checkbox's*/
+    background-color: var(--fontColor_Lightblue);
+    color: white;
+    padding: 15px 40px 15px 40px;
+    border-radius: 10px;
+    width: 150px;
+    text-align: center;
+    margin-top: 25px;
+}
+
+
+
+                        /*         ITENS NA PÁGINA CONTATO   */
+
+
+
+.input_format{
+    /*Página: Contato
+    Classe para estilizar todos os inputs presentes na página (ou no projeto, se fosse o caso)*/
+    border-radius: 5px;
+    width: auto;
+    border-color: #d3d0d0;
+    height: 25px;
+    border-width: 1px;
+    padding: 0% 2% 0% 2%;
+}
+
+.multilineinput_format{
+    /*Página: Contato
+    Classe para estilizar todos os multiline inputs (as tags <textarea>), presentes na página (ou no projeto, se fosse o caso)*/
+
+    border-radius: 5px;
+    width: auto;
+    border-color: #d3d0d0;
+    height: 25px;
+    border-width: 1px;
+    padding: 0% 2% 0% 2%;
+    resize: none;
+    height: 100px;
+}
+
+.dropdown_format{
+    /*Página: Contato
+    Classe para estilizar todos os dropdowns (as tags <select>) presentes na página (ou no projeto, se fosse o caso)*/
+
+    border-radius: 5px;
+    width: auto;
+    border-color: #d3d0d0;
+    height: 25px;
+    border-width: 1px;
+    padding: 0% 2% 0% 2%;
+}
+
+
+.groups_row_contatc{
+    /*Página: Contato
+    Classe para estilizar a div com a imagem do veículo e a div com inputs na página contato. Poderia utilizar a classe já criada groups_row, mas ela tem não tem margem, enquanto esta tem 5% de margem right*/
+
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5%;
+}
+
+.groups_column_contact{
+    /*Página: Contato
+    Classe para estilizar a div com as labels e inputs. Poderia utilizar a classe já criada groups_column, mas ela tem 10px de margin left, enquanto esta não tem e tem uma largura de 330px*/
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 330px;
+
+}
+
+.bttn_send_message{
+    /*Página: Contato
+    Classe para utilizada para estilizar o botão (desenvolvido com tag âncora) "Enviar", que supostamente enviaria a mensagem de contato do usuário para a montadora Ford*/
+    display: flex;
+    background-color: var(--fontColor_Lightblue);
+    color: white;
+    border-radius: 10px;
+    margin-top: 20px;
+    width: auto;
+    text-align: center;
+    justify-content: center;
+    padding: 10px 20px 10px 20px;
+}
+
+label{
+    /*Página: Contato
+    Classe para estilizar todas as labels do projeto*/
+    margin-top: 10px;
+    font-family: var(--fontFamily);
+}
+
+ul{
+    /*Página: Contato
+    Classe para estilizar todas as listas do projeto*/
+    padding: 0;
+}
+
+li{
+    /*Página: Contato
+    Classe para estilizar todos os itens das listas (ul) do projeto*/
+    padding: 0;
+}
+
+
+.link_header:hover{
+    /*Página: Todas*/
+    /* Definições de estilo para quando der um hover nos links do header*/
+    text-decoration: underline;
+}
+.product_description:hover span{
+    /*Página: Home
+    Classe que estiliza o span 'aqui' que consta na chamada para ação, na tag main, abaixo da imagem do lançamento do produto na página home*/
+    text-decoration: underline;
+    color: var(--fontColor_Lightblue);
+}
+
+
+.bttn_send_message:hover {
+    /*Página: Contato
+    Classe que estiliza o botão Enviar mensagem, na página contato, para quando o botão sofrer um hover*/
+    animation: pulse 0.6s infinite alternate;
+}
+
+.bttn_compare_cars:hover {
+    /*Página: Lançamento
+    Classe que estiliza o botão Comparar Veículos, na página Lançamento, para quando o botão sofrer um hover*/
+    animation: pulse 0.6s infinite alternate;
+}
+
+/*Regra do CSS para criar animações. Será puxada nos botões, quando sofrerem hover*/
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+                /*Responsividade*/
+
+
+@media (max-width:1000px){
+    /*Se a largura da página do dispositivo for menor ou igual a 1000px:*/
+    .main__product{
+        /*Página: Lançamento
+        Ajusta a altura mínima e máxima da class main__product.*/
+        min-height: 100px;
+        max-height: 500px;
+    }
+    iframe{
+        /*Página: Lançamento
+        Ajusta a altura mínima do iframe que contém o vídeo do Youtube*/
+        min-height: 300px;
+    }
+
+}
+
+
+@media (max-width:670px) {
+    /*Se a largura da página do dispositivo for menor ou igual a 670px:*/
+    .groups_row_contatc   {
+        /*Página: Contato
+        A div que está definida em linha (row) passa a sem em coluna, para exibir a imagem do veículo e depois o formulário de contato, um embaixo do outro, e adiciona uma margem de 30px para não ocultar a imagem do veículo ao diminuir a tela*/
+        flex-direction: column;
+        margin-top: 30px;
+    }
+
+    #main_group_contact {
+    /* A div que exibe o formulário de contato recebe uma margem superior de 50px por padrão. 
+    A margem foi aplicada diretamente na tag utilizando o atributo inline "style="margin-top: 50px;" 
+    para evitar que outras divs com a mesma classe, como "groups_column_contact", sejam afetadas. 
+    A classe "groups_column_contact" contém outras estilizações que não devem ser alteradas.
+    Quando a tela tiver largura inferior a 671px, a margem superior do ID "main_group_contact" é ajustada para -40px, 
+    pois modificar a classe globalmente afetaria outras divs que não deveriam ser impactadas por essa alteração. */
+   margin-top: -40px !important;
+    }
+ 
+}
+
+
+@media (max-width:560px) {
+    /*Se a largura da página do dispositivo for menor ou igual a 560px:*/
+    .main__image{
+        /*Página: Home
+        Altera o tamanho da imagem do produto para ocupar 95% do seu contêiner*/
+        width: 95%;
+    }
+    .product_description{
+        /*Página: Home
+        /*Diminui a fonte da chamada para ação para 14px*/
+        font-size: 14px;
+    }
+    .logo_ford{
+        /*Altera a logo da Ford presente no header e footer das páginas para maior espaçamento lateral*/
+        margin-left: 2%;
+        margin-right: 5%;
+    }
+    
+}
+
+@media (max-width:395px) {
+    /*Se a largura da página do dispositivo for menor ou igual a 395px:*/
+    .main__image{
+        /*Página: Home
+        Altera o tamanho da imagem do produto para ocupar 95% do seu contêiner*/
+        width: 98%;
+    }
+    .product_description{
+        /*Página: Home
+        /*Diminui a fonte da chamada para ação para 12px*/
+        font-size: 12px;
+    }
+    
+}

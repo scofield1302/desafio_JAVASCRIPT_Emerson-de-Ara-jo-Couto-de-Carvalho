@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Ford do Brasil</title>
+    <!-- Puxa dinamicamente o arquivo CSS que estilizará o documento -->
+    <link rel="stylesheet" href="./styles/styles.css">
+    <!-- Adiciona o mesmo Favicon da Ford -->
+    <link rel="icon" href="./assets/favicon.png"> 
+</head>
+<body>
+    
+    <header>
+        <!-- No Header é adicionado a logo da Ford, os links com a tag nav, para que os navegadores entendam que se trata de itens de navegação e esses links são direcionados às páginas existentes no projeto, que são a Home (página inicial), Lançamento e contato. -->
+        <img class="logo_ford" src="./assets/logo-ford-256.png" alt="Logo Ford">
+        <Nav class="header__links">
+        <a class="link_header" href="./index.html">Home</a>
+        <a class="link_header" href="./lancamento.html">Lançamento</a>
+        <a class="link_header" href="./contato.html">Contato</a>
+        </Nav>
+    </header>
+
+    <main>
+        <!-- Na tag Main foi adicionada uma div com fundo azul (para quebrar um pouco a ideia da página toda branca, mas sem perder a identidade visual da Ford) contendo o iframe que reproduz o vídeo do youtube -->
+        <div class="main__product">
+        <iframe src="https://www.youtube.com/embed/vQsryuNmsL0" frameborder="0" >
+        </iframe>
+            <label class="info_car2">Ford Ranger 2022: Uma picape robusta e versátil, projetada para enfrentar desafios tanto no ambiente urbano quanto em terrenos off-road. Compare os modelos abaixo.
+            </label>
+        </div>
+        <!-- Depois foi criada outra div em formato de coluna contendo uma div em row com os 3 veículos de lançamento e abaixo dela o botão de comparar modelos-->
+        <div class="groups_column">
+        <div class="groups_row">
+            <div  class="groups_column">
+                <img src="assets/XL Cabine.jpg" alt="Imagem do veículo Ford Ranger XL Cabine 2022">
+                <div class="groups_row">
+                    <input type="checkbox" id="option1" name="option1" value="1">
+                    <div style="align-items:flex-start;" class="groups_column">
+                        <span class="model_car">Ford Ranger XL Cabine 2022</span>
+                        <span>Ford Ranger XL Cabine 2022</span>
+                        <span>R$150.000</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="groups_column">
+                <img src="assets/xls 2.2 diesel.jpg" alt="Imagem do veículo Ford Ranger XLS 2.2 Diesel 2022">
+                <div class="groups_row">
+                    <input type="checkbox" id="option2" name="option2" value="2">
+                    <div style="align-items:flex-start;" class="groups_column">
+                        <span class="model_car">Ford Ranger XLS 2.2 Diesel 2022</span>
+                        <span>XL 2.2 Turbodiesel 4x4</span>
+                        <span>R$180.000</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="groups_column">
+                <img src="assets/storm.jpg" alt="Imagem do veículo Ford Ranger Storm 2022">
+                <div class="groups_row">
+                    <input type="checkbox" id="option3" name="option3" value="3">
+                    <div style="align-items:flex-start;" class="groups_column">
+                        <span class="model_car">Ford Ranger Storm 2022</span>
+                        <span>Ford Ranger Storm 2022</span>
+                        <span>R$210.000</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="bttn_compare_cars">Comparar Carros</a>
+        </div>
+    </main>
+
+    <footer>
+        <!-- No Header, as redes sociais da Ford foram adicionadas através de imagems clicáveis, adicionando as imagens dentro de uma tag âncora e para melhorar a experiência do usuário, foi utilizado o target="_blank" para abrir a página em uma nova aba do navegador. Ao final, foi adicionada a logo da Ford -->
+        <div class="footer__socialnetwork">
+        <span style="color: #ffffff;">Redes Sociais</span>
+        <a href="https://www.facebook.com/FordBrasil/" target="_blank"><img src="./assets/facebook-50.png" alt="Perfil no Facebook Ford do Brasil" width="35px"></a>
+        <a href="https://www.youtube.com/fordbrasil" target="_blank"><img src="./assets/youtube-squared-50.png" alt="Canal no Youtube da Ford do Brasil" width="35px"></a>
+        <a href="https://www.instagram.com/fordbrasil/" target="_blank"><img src="./assets/instagram-logo-50.png" alt="Perfil no Instagram da Ford do Brasil" width="35px"></a>
+        </div>
+        <img class="logo_ford" src="./assets/logo-ford-256.png" alt="Logo Ford">
+
+    </footer>
+</body>
+</html>
