@@ -151,6 +151,47 @@ iframe{
     
 }
 
+table {
+    width: 50%;
+    border-collapse:collapse;
+    display: flex; 
+    flex-direction: row;
+
+    gap: 10px;
+}
+
+td{
+    display: flex; 
+    flex-direction: column;
+    text-align: left;
+    text-align: center;
+    padding: 8px;
+    justify-content: center;
+    border-collapse: collapse;
+    border: solid;
+    border-width: 1px;
+    border-color: #00000045;
+    border-radius: 10px;
+    margin-right: 20px;
+    transition: transform 0.3s ease, margin 0.3s ease;
+
+
+    
+}
+
+
+
+tr{
+    
+    display: flex;
+    margin-top: 20px;
+
+}
+
+tbody{
+    width: 100%;
+}
+
 .groups_row{
     /*Página: Lançamento
     Classe criada para facilitar os grupos que são exibidos em formato de row, como por exemplo o grupo (div) que de um lado tem o checkbox e do outro (à sua direita) tem um modelo e breve descrição do veículo.*/
@@ -321,6 +362,12 @@ li{
 }
 
 
+td:hover{
+    box-shadow: 4px 4px 4px 2px #888484;
+    transform: scale(1.1);
+    margin-left: 20px;
+
+}
 .bttn_send_message:hover {
     /*Página: Contato
     Classe que estiliza o botão Enviar mensagem, na página contato, para quando o botão sofrer um hover*/
