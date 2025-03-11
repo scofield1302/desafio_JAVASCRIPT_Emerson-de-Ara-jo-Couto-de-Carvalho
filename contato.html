@@ -31,27 +31,27 @@
                 <label>Sobre você</label>
                 <!-- Foi criado um formulário de contato com Inputs, mas além disso, foram adicionadas labels que, embora sejam opcionais, acredita-se ser de muita relevância para a experiência do usuário, visto que se o mesmo preencher alguma(s) informação(ões) e depois se esquecer sobre o que era o input, a label ajuda-o a entender o que está preenchendo sem necessitar apagar o conteúdo. Além disso, também para facilitar o preenchimento e melhorar a U.X, foram adicionados placeholders nos inputs.
                 A lista de inputs e labels com informações para serem preenchidas no formulário de contado foi criada com tag ul -->
-            <form>
+            <form action="" method="post">
                 <ul>
                     <li class="groups_column_contact">
                         <label>Nome</label>
-                        <input id="Input_Name" class="input_format" placeholder="Informe o Seu Nome">
+                        <input type="text" id="Input_Name" class="input_format" placeholder="Informe o Seu Nome">
                     </li>
                     <li class="groups_column_contact">
                         <label>E-mail</label>
-                        <input class="input_format"  placeholder="Informe o Seu E-mail">
+                        <input type="email" class="input_format"  placeholder="Informe o Seu E-mail">
                     </li>
                     <li class="groups_column_contact">
                         <label>Telefone</label>
-                        <input class="input_format"  placeholder="Informe o Seu Telefone">
+                        <input type="text" class="input_format"  placeholder="Informe o Seu Telefone">
                     </li>
                     <li class="groups_column_contact">
                         <label>Tipo de Contato</label>
                         <select class="dropdown_format">
-                            <option>Sugestão</option>
-                            <option>Elogios</option>
-                            <option>Dúvida</option>
-                            <option>Reclamação</option>
+                            <option value="Sugestão">Sugestão</option>
+                            <option value="Elogios">Elogios</option>
+                            <option value="Dúvida">Dúvida</option>
+                            <option value="Reclamação">Reclamação</option>
                         </select>
                     </li>
                     <li class="groups_column_contact">
