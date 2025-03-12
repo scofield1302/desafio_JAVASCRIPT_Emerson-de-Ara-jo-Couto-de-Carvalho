@@ -4,6 +4,7 @@ body {
     padding-bottom: 70px;
     padding-top: 10px;
 }
+
 /*Importação de fontes externas*/
 @import url('https://fonts.googleapis.com/css2?family=Bellota+Text:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
@@ -35,6 +36,9 @@ header{
     height: 50px;
     background-color: white;
     padding-top: 1%;
+    border-width: 0px 0px 1px 0px;
+    border-style: solid;
+    border-color: #00000027;
 }
 
 .header__links{
@@ -63,12 +67,19 @@ footer{
     bottom: 0;
     width: 100%;
     background-color: var(--fontColor_Darkblue);
-    height: 50px;
+    height: fit-content;
     display: flex;
-    justify-content:space-between;
-    align-items: center;
-    padding-left: 10px;    
+    justify-content:flex-start;
+    align-items: baseline;
     margin-top: 20px;
+}
+
+.copyright{
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding-right: 10px;
+    margin-bottom: -25px;
 }
 
 .footer__socialnetwork{
@@ -78,12 +89,27 @@ footer{
     display: flex;
     align-items: center;
     gap: 10px;
+    margin: 0px 10px 0px 10px;
 }
 
+.footer__socialNetwork_Logo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+
+}
+
+.footer__copy__socialNetwork{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
 .logo_ford{
     /*Página: Todas
     logo da Ford, present no header e footer*/
-    width: 7%;
+    width: 100px;
     margin-right: 1%;
     margin-left: 1%;
 
@@ -153,20 +179,20 @@ footer{
     align-items: center;
     justify-content: center;
     background-color: #000D5B;
-    min-height: 300px;
-    max-height: 800px;
     width: 100%;
 }
 
 iframe{
     /*Página: Lançamento
     Estilizações no video do youtube que é motrado na página lançamento*/
-    margin-top: 70px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     width: 80%;
     min-height: 600px;
     max-height: 800px;
-    padding: 5% 10% 5% 10%;
-
+    padding: 4% 10% 0% 10%;
+    background-position: center;
+    background-size: cover;
     
 }
 
@@ -182,7 +208,7 @@ table {
 
 td{
     display: flex; 
-    flex-direction: column;
+    flex-direction: row;
     text-align: left;
     text-align: center;
     padding: 8px;
@@ -228,7 +254,6 @@ tr{
     flex-direction: column;
     align-items:first center;
     justify-content: flex-start;
-    margin-left:10px;
     width: 100%;
 }
 
@@ -250,10 +275,9 @@ tr{
     Classe criada para estilizar a fonte que exibe a breve descrição do veículo de lançamento, embaixo do vídeo promocional*/
     font-size: 16px;
     color: white;
-    padding: 0 10% 2% 10%;
     text-align: center;
-    margin-top: 30x;
     width: 80%;
+    margin-bottom: 10px;
 }
 
 .bttn_compare_cars{
@@ -277,7 +301,7 @@ tr{
 .input_format{
     /*Página: Contato
     Classe para estilizar todos os inputs presentes na página (ou no projeto, se fosse o caso)*/
-    border-radius: 5px;
+    border-radius: 3px;
     width: auto;
     border-color: #d3d0d0;
     height: 25px;
@@ -289,7 +313,7 @@ tr{
     /*Página: Contato
     Classe para estilizar todos os multiline inputs (as tags <textarea>), presentes na página (ou no projeto, se fosse o caso)*/
 
-    border-radius: 5px;
+    border-radius: 3px;
     width: auto;
     border-color: #d3d0d0;
     height: 25px;
@@ -303,7 +327,7 @@ tr{
     /*Página: Contato
     Classe para estilizar todos os dropdowns (as tags <select>) presentes na página (ou no projeto, se fosse o caso)*/
 
-    border-radius: 5px;
+    border-radius: 3px;
     width: auto;
     border-color: #d3d0d0;
     height: 25px;
@@ -320,19 +344,55 @@ tr{
     flex-direction: row;
     gap: 10px;
     align-items: center;
-    justify-content: center;
+    justify-content: center  ;
     margin-right: 5%;
+    margin-top: 50px;
+}
+
+.contact__image{
+    background-position: center;
+    width: 500px;
 }
 
 .groups_column_contact{
+    /*Página: Contato.
+    Para estilizar o formulário de contato todo*/
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 330px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #0000004f;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px 2px #888484;
+    margin-bottom: 20px;
+
+}
+
+.groups_column_contact2{
     /*Página: Contato
     Classe para estilizar a div com as labels e inputs. Poderia utilizar a classe já criada groups_column, mas ela tem 10px de margin left, enquanto esta não tem e tem uma largura de 330px*/
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    width: 330px;
+    margin: 3%;
+}
+
+
+.contact__about_you{
+    background-color: var(--fontColor_Lightblue);
+    border-radius: 10px 10px 0px 00px;
+    margin-top: 0;
+    border-width: 1px;
+    border-style: solid;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    color: white;
+    text-align: center;
 
 }
+
 
 .bttn_send_message{
     /*Página: Contato
@@ -342,10 +402,13 @@ tr{
     color: white;
     border-radius: 10px;
     margin-top: 20px;
-    width: auto;
+    width: 270px;
     text-align: center;
     justify-content: center;
     padding: 10px 20px 10px 20px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
 }
 
 label{
@@ -501,9 +564,9 @@ td:hover{
 }
 
 
-@media(max-width:1141px){
+@media(max-width:1153px){
     .description_home{
-        margin: 10px 0px 0px 0px;
+        margin: 10px 0px 10px 0px;
         font-size: 20px;
         color: #000000;
         width: 100%;
@@ -554,5 +617,26 @@ td:hover{
         padding: 0;
 
         font-size: 14px ;
+    }
+}
+
+@media(max-width:408px){
+    header{
+        gap: 10px;
+    }
+    .logo_ford{
+        width: 70px;
+    }
+}
+
+@media(max-width:943px){
+    .copyright{
+        margin-bottom: 10px;
+}
+}
+
+@media(max-width:669px){
+    .contact__image{
+        width: 400px;
     }
 }
