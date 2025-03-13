@@ -25,41 +25,32 @@
         <!-- Foi criada uma div em row onde exibe uma imagem de um dos veículos de lançamento do lado esquerdo e do lado direito uma div com inputs num formulários de contato -->
 
         <div class="groups_row_contatc">
-            <img class="contact__image" src="./assets/XL Cabine.jpg" alt="Imagem Ford XL Cabine">
+            <img class="contact__image" src="./assets/storm.png" alt="Imagem Ford Ranger Storm">
             
             <div id="main_group_contact"  style="margin-top: 50px;" class="groups_column_contact">
                 <label class="contact__about_you">Sobre você</label>
                 <!-- Foi criado um formulário de contato com Inputs, mas além disso,  foram adicionadas labels que, embora sejam opcionais, acredita-se ser de muita relevância para a experiência do usuário, visto que se o mesmo preencher alguma(s) informação(ões) e depois se esquecer sobre o que era o input, a label ajuda-o a entender o que está preenchendo sem necessitar apagar o conteúdo. Além disso, também para facilitar o preenchimento e melhorar a U.X, foram adicionados placeholders nos inputs.
                 A lista de inputs e labels com informações para serem preenchidas no formulário de contado foi criada com tag ul -->
             <form action="" method="post">
-                <ul>
-                    <li class="groups_column_contact2">
-                        <label>Nome</label>
-                        <input type="text" id="Input_Name" class="input_format" placeholder="Informe o Seu Nome">
-                    </li>
-                    <li class="groups_column_contact2">
-                        <label>E-mail</label>
-                        <input type="email" class="input_format"  placeholder="Informe o Seu E-mail">
-                    </li>
-                    <li class="groups_column_contact2">
-                        <label>Telefone</label>
-                        <input type="text" class="input_format"  placeholder="Informe o Seu Telefone">
-                    </li>
-                    <li class="groups_column_contact2">
-                        <label>Tipo de Contato</label>
-                        <select class="dropdown_format">
-                            <option value="Sugestão">Sugestão</option>
-                            <option value="Elogios">Elogios</option>
-                            <option value="Dúvida">Dúvida</option>
-                            <option value="Reclamação">Reclamação</option>
-                        </select>
-                    </li>
-                    <li class="groups_column_contact2">
-                        <label>Mensagem</label>
-                        <textarea class="multilineinput_format"></textarea>
-                    </li>
-                    
-                </ul>
+                <label>Nome</label>
+                <input type="text" id="Input_Name" class="input_format" placeholder="Informe o Seu Nome" required>
+
+                <label>E-mail</label>
+                <input type="email" class="input_format"  placeholder="Informe o Seu E-mail" required>
+
+                <label>Telefone</label>
+                <input type="text" class="input_format"  placeholder="Informe o Seu Telefone" required>
+
+                <label>Tipo de Contato</label>
+                <select class="dropdown_format">
+                    <option value="Sugestão">Sugestão</option>
+                    <option value="Elogios">Elogios</option>
+                    <option value="Dúvida">Dúvida</option>
+                    <option value="Reclamação">Reclamação</option>
+                </select>
+
+                <label>Mensagem</label>
+                <textarea class="multilineinput_format"></textarea required>
             </form>
                 <!-- Por último, o botão que enviará a solicitação de contato do usuário à montadora. -->
                 <a class="bttn_send_message">Enviar</a>
@@ -69,25 +60,25 @@
 
     </main>
     <footer>
-        <!-- No Header, as redes sociais da Ford foram adicionadas através de imagems clicáveis, adicionando as imagens dentro de uma tag âncora e para melhorar a experiência do usuário, foi utilizado o target="_blank" para abrir a página em uma nova aba do navegador. Ao final, foi adicionada a logo da Ford -->
 
-
-        <!-- Div que agrupará o copyright + a div que tem as redes sociais e a logo da Ford-->
-
-        <div class="footer__copy__socialNetwork">
+        <div class="footer__socialNetwork_Logo"> <!-- div que terá as redes sociais + a logo da ford -->
+            <div class="footer__socialnetwork"> <!-- div que terá as redes sociais + a palavra Redes Sociais -->
+            <span class="text_socialNetwork">Redes Sociais</span>
+            <a href="https://www.facebook.com/FordBrasil/" target="_blank">
+                <img src="./assets/facebook-50.png" alt="Perfil no Facebook Ford do Brasil" width="35px"></a>
+            <a href="https://www.youtube.com/fordbrasil" target="_blank">
+                <img src="./assets/youtube-squared-50.png" alt="Canal no Youtube da Ford do Brasil" width="35px"></a>
+            <a href="https://www.instagram.com/fordbrasil/" target="_blank">
+                <img src="./assets/instagram-logo-50.png" alt="Perfil no Instagram da Ford do Brasil" width="35px"></a>
+            
+            </div>
+            
         <p class="copyright">Copyright © 2025 Ford Motor Company - Todos os direitos reservados</p>
-        <!-- Div que agrupará a palavra redes sociais + cada rede social + a logo da ford
-        -->
-        <div class="footer__socialNetwork_Logo">
-        <div class="footer__socialnetwork">
-        <span style="color: #ffffff;">Redes Sociais</span>
-        <a href="https://www.facebook.com/FordBrasil/" target="_blank"><img src="./assets/facebook-50.png" alt="Perfil no Facebook Ford do Brasil" width="35px"></a>
-        <a href="https://www.youtube.com/fordbrasil" target="_blank"><img src="./assets/youtube-squared-50.png" alt="Canal no Youtube da Ford do Brasil" width="35px"></a>
-        <a href="https://www.instagram.com/fordbrasil/" target="_blank"><img src="./assets/instagram-logo-50.png" alt="Perfil no Instagram da Ford do Brasil" width="35px"></a>
-        </div>
         <img class="logo_ford" src="./assets/logo-ford-256.png" alt="Logo Ford">
         </div>
-        </div>
+
+
+
     </footer>
 </body>
 <script>

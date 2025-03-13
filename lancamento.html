@@ -37,32 +37,51 @@
 
             <tr>
                 <td> 
-                    
-                    <input type="checkbox"> 
                     <div style="display: flex; flex-direction: column;">
-                    <img src="./assets/XL Cabine.jpg">
-                    <p>XL Cabine</p>
-                    <p>R$ 150.000</p>
+                    <img class="img_xl_cabine" src="./assets/xl cabine.png" alt="Ford Ranger XL Cabine">
+                    <div style="display: flex; flex-direction: row; justify-content: space-between;">
+                    <div style="display: flex; justify-content: flex-start;">
+                    <input style="width: 30px;" type="checkbox" > 
+                    <div style="display: flex; flex-direction: column; height: fit-content; margin-left: 10px;">
+                    <p style="margin: 0; text-align: start;">Ford Ranger XL Cabine</p>
+                    <p style="margin: 0; text-align: start;">R$ 150.000</p>
+                    </div>
+                    </div>
+                    <img style="width: 30px;" height="30px" src="./assets/info-2-xxl.png">
+                    </div>
                     </div>
                 </td>
       
                 <td>
-                    <input type="checkbox"> 
                     <div style="display: flex; flex-direction: column;">
-                    <img src="./assets/xls 2.2 diesel.jpg">
-                    <p>Ford XL 2.2 Diesel</p>
-                    <p>R$ 180.000</p>
+                    <img class="img_xl_diesel" src="./assets/xl diesel.png" alt="Ford Ranger XLS 2.2 Diesel">
+                    <div style="display: flex; flex-direction: row; justify-content: space-between;">
+                    <div style="display: flex; justify-content: flex-start;">
+                    <input style="width: 30px;" type="checkbox"> 
+                    <div style="display: flex; flex-direction: column; height: fit-content; margin-left: 10px;">
+                    <p style="margin: 0; text-align: start;">Ford Ranger XLS 2.2 Diesel</p>
+                    <p style="margin: 0; text-align: start;">R$ 180.000</p>
+                    </div>
+                    </div>
+                    <img style="width: 30px;" height="30px" src="./assets/info-2-xxl.png">
+                    </div>
                     </div>
                 </td>
        
                 <td> 
-                    <input type="checkbox"> 
                     <div style="display: flex; flex-direction: column;">
-                    <img src="./assets/storm.jpg">
-                    <p>Ford Ranger Storm</p>
-                    <p>R$ 210.000</p>
+                    <img  class="img_storm" src="./assets/storm.png" alt="Ford Ranger Storm">
+                    <div style="display: flex; flex-direction: row; justify-content: space-between;">
+                    <div style="display: flex; justify-content: flex-start;">
+                    <input style="width: 30px;" type="checkbox"> 
+                    <div style="display: flex; flex-direction: column; height: fit-content; margin-left: 10px;">
+                    <p style="margin: 0; text-align: start;">Ford Ranger Storm</p>
+                    <p style="margin: 0; text-align: start;">R$ 210.000</p>
                     </div>
-                   
+                    </div>
+                    <img style="width: 30px;" height="30px" src="./assets/info-2-xxl.png">
+                    </div>
+                    </div>
                  </td>
             </tr>
         </table>
@@ -71,25 +90,25 @@
     </main>
 
     <footer>
-        <!-- No Header, as redes sociais da Ford foram adicionadas através de imagems clicáveis, adicionando as imagens dentro de uma tag âncora e para melhorar a experiência do usuário, foi utilizado o target="_blank" para abrir a página em uma nova aba do navegador. Ao final, foi adicionada a logo da Ford -->
 
-
-        <!-- Div que agrupará o copyright + a div que tem as redes sociais e a logo da Ford-->
-
-        <div class="footer__copy__socialNetwork">
+        <div class="footer__socialNetwork_Logo"> <!-- div que terá as redes sociais + a logo da ford -->
+            <div class="footer__socialnetwork"> <!-- div que terá as redes sociais + a palavra Redes Sociais -->
+            <span class="text_socialNetwork">Redes Sociais</span>
+            <a href="https://www.facebook.com/FordBrasil/" target="_blank">
+                <img src="./assets/facebook-50.png" alt="Perfil no Facebook Ford do Brasil" width="35px"></a>
+            <a href="https://www.youtube.com/fordbrasil" target="_blank">
+                <img src="./assets/youtube-squared-50.png" alt="Canal no Youtube da Ford do Brasil" width="35px"></a>
+            <a href="https://www.instagram.com/fordbrasil/" target="_blank">
+                <img src="./assets/instagram-logo-50.png" alt="Perfil no Instagram da Ford do Brasil" width="35px"></a>
+            
+            </div>
+            
         <p class="copyright">Copyright © 2025 Ford Motor Company - Todos os direitos reservados</p>
-        <!-- Div que agrupará a palavra redes sociais + cada rede social + a logo da ford
-        -->
-        <div class="footer__socialNetwork_Logo">
-        <div class="footer__socialnetwork">
-        <span style="color: #ffffff;">Redes Sociais</span>
-        <a href="https://www.facebook.com/FordBrasil/" target="_blank"><img src="./assets/facebook-50.png" alt="Perfil no Facebook Ford do Brasil" width="35px"></a>
-        <a href="https://www.youtube.com/fordbrasil" target="_blank"><img src="./assets/youtube-squared-50.png" alt="Canal no Youtube da Ford do Brasil" width="35px"></a>
-        <a href="https://www.instagram.com/fordbrasil/" target="_blank"><img src="./assets/instagram-logo-50.png" alt="Perfil no Instagram da Ford do Brasil" width="35px"></a>
-        </div>
         <img class="logo_ford" src="./assets/logo-ford-256.png" alt="Logo Ford">
         </div>
-        </div>
+
+
+
     </footer>
 </body>
 </html>

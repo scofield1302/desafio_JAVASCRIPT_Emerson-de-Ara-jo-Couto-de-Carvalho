@@ -72,14 +72,11 @@ footer{
     justify-content:flex-start;
     align-items: baseline;
     margin-top: 20px;
+    padding-top: 5px;
 }
 
-.copyright{
+.text_socialNetwork{
     color: white;
-    width: 100%;
-    text-align: center;
-    padding-right: 10px;
-    margin-bottom: -25px;
 }
 
 .footer__socialnetwork{
@@ -90,11 +87,14 @@ footer{
     align-items: center;
     gap: 10px;
     margin: 0px 10px 0px 10px;
+    width: fit-content;
+    justify-content: flex-start;
 }
 
 .footer__socialNetwork_Logo{
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: space-between;
     width: 100%;
 
@@ -208,7 +208,7 @@ table {
 
 td{
     display: flex; 
-    flex-direction: row;
+    flex-direction: column;
     text-align: left;
     text-align: center;
     padding: 8px;
@@ -283,13 +283,14 @@ tr{
 .bttn_compare_cars{
     /*Página: Lançamento
     Classe criada para estilizar o botão (que foi construído com tag âncora) que compara os modelos do veículos selecionados através dos checkbox's*/
-    background-color: var(--fontColor_Lightblue);
+    background-color: var(--fontColor_Darkblue);
     color: white;
     padding: 15px 40px 15px 40px;
     border-radius: 10px;
     width: 150px;
     text-align: center;
     margin-top: 25px;
+    cursor: pointer;
 }
 
 
@@ -398,7 +399,7 @@ tr{
     /*Página: Contato
     Classe para utilizada para estilizar o botão (desenvolvido com tag âncora) "Enviar", que supostamente enviaria a mensagem de contato do usuário para a montadora Ford*/
     display: flex;
-    background-color: var(--fontColor_Lightblue);
+    background-color: var(--fontColor_Darkblue);
     color: white;
     border-radius: 10px;
     margin-top: 20px;
@@ -409,6 +410,8 @@ tr{
     margin-left: 10px;
     margin-bottom: 10px;
     margin-right: 10px;
+    cursor: pointer;
+
 }
 
 label{
@@ -418,16 +421,10 @@ label{
     font-family: var(--fontFamily);
 }
 
-ul{
-    /*Página: Contato
-    Classe para estilizar todas as listas do projeto*/
-    padding: 0;
-}
-
-li{
-    /*Página: Contato
-    Classe para estilizar todos os itens das listas (ul) do projeto*/
-    padding: 0;
+form{
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
 }
 
 
@@ -436,6 +433,23 @@ li{
     /* Definições de estilo para quando der um hover nos links do header*/
     text-decoration: underline;
 }
+
+.img_xl_cabine:hover{
+    content: url('../assets/xl\ cabine\ farol.png');
+}
+
+.img_storm:hover{
+    content: url('../assets/storm\ farol.png');
+
+}
+
+.img_xl_diesel:hover{
+    content: url('../assets/xl\ diesel\ farol.png');
+}
+
+
+
+
 .product_description:hover span{
     /*Página: Home
     Classe que estiliza o span 'aqui' que consta na chamada para ação, na tag main, abaixo da imagem do lançamento do produto na página home*/
@@ -462,6 +476,11 @@ td:hover{
     animation: pulse 0.6s infinite alternate;
 }
 
+.copyright{
+    color: white;
+    margin: 0;
+    width: fit-content;
+}
 /*Regra do CSS para criar animações. Será puxada nos botões, quando sofrerem hover*/
 @keyframes pulse {
     0% {
@@ -629,14 +648,35 @@ td:hover{
     }
 }
 
-@media(max-width:943px){
-    .copyright{
-        margin-bottom: 10px;
-}
-}
 
 @media(max-width:669px){
     .contact__image{
         width: 400px;
     }
+}
+
+@media(max-width:817px){
+    .copyright{
+        font-size: 14px;
+    }
+
+    .text_socialNetwork{
+        font-size: 14px;
+    }
+
+}
+
+@media(max-width:748px){
+    .text_socialNetwork{
+        display: none;
+
+}
+}
+
+@media(max-width:656px){
+    .copyright{
+        font-size: 12px;
+        text-align: center;
+}
+
 }
