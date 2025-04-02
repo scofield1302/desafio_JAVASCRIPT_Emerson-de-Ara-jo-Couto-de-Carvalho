@@ -10,6 +10,8 @@
     <link rel="icon" href="./assets/favicon.png"> 
 </head>
 <body>
+    <script src="./js/carousel.js"></script>   
+
     <header>
         <!-- No Header é adicionado a logo da Ford, os links com a tag nav, para que os navegadores entendam que se trata de itens de navegação e esses links são direcionados às páginas existentes no projeto, que são a Home (página inicial), Lançamento e contato. -->
 
@@ -20,14 +22,19 @@
         <a class="link_header" href="./contato.html">Contato</a>
         </Nav>
     </header>
-    <main class="produto_central">
-        <!-- Na Tag main foi inserida a imagem do <produto> de lançamento e abaixo dela inserida uma chamada para ação, utilizando uma tag âncora, que ao clicar, direcionará o usuário à página de lançamento do produto -->
-        <a class="main__image" href="./lancamento.html">
-            <img class="main__image" src="./assets/imagem_1.jpg" alt="Foto Lançamento Nova Ford Ranger"></a>
-            <label class="description_home">Ford Ranger 2022  Conforto e versatilidade, com design e tecnologia incomparáveis. </label>
+    <main>        
+        <div id="carousel" class="div_carousel">
+        </div>
+        <div id="carousel-title">
+        </div>
+        <script>
+             //insert each image on carousel
+            carouselArr.push(new Carousel("imagem_1.jpg","Esta é a nova Ranger Ford 2022. Verifique novidades.","lancamento.html"));
+            carouselArr.push(new Carousel("imagem_2.jpg","Ford a nossa história","#"));
+            carouselArr.push(new Carousel("imagem_3.jpg","Nova Ford Bronco Sport 2022","lancamento.html"));
+            Carousel.Start(carouselArr);
+        </script>
 
-
-            <a class="product_description" href="./lancamento.html">Esta é a nova Ford Ranger. Consulte novidades <span>aqui.</span></a>
     </main>
     <footer>
 
@@ -50,5 +57,7 @@
 
 
     </footer>
+
+
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=0.9">
     <title>Lançamento - Ford do Brasil</title>
     <!-- Puxa dinamicamente o arquivo CSS que estilizará o documento -->
     <link rel="stylesheet" href="./styles/styles.css">
@@ -10,7 +10,7 @@
     <link rel="icon" href="./assets/favicon.png"> 
 </head>
 <body>
-    
+    <script src="./js/comparemine.js"></script>
     <header>
         <!-- No Header é adicionado a logo da Ford, os links com a tag nav, para que os navegadores entendam que se trata de itens de navegação e esses links são direcionados às páginas existentes no projeto, que são a Home (página inicial), Lançamento e contato. -->
         <img class="logo_ford" src="./assets/logo-ford-256.png" alt="Logo Ford">
@@ -33,15 +33,15 @@
         <!-- Depois foi criada outra div em formato de coluna contendo uma div em row com os 3 veículos de lançamento e abaixo dela o botão de comparar modelos-->
         
     
-            <table>
+            <table class="list_car">
 
-            <tr>
-                <td> 
+            <tr class="table_tr">
+                <td class="table_td"> 
                     <div style="display: flex; flex-direction: column;">
                     <img class="img_xl_cabine" src="./assets/xl cabine.png" alt="Ford Ranger XL Cabine">
                     <div style="display: flex; flex-direction: row; justify-content: space-between;">
                     <div style="display: flex; justify-content: flex-start;">
-                    <input style="width: 30px;" type="checkbox" > 
+                    <input id="1" style="width: 30px;" type="checkbox" > 
                     <div style="display: flex; flex-direction: column; height: fit-content; margin-left: 10px;">
                     <p style="margin: 0; text-align: start;">Ford Ranger XL Cabine</p>
                     <p style="margin: 0; text-align: start;">R$ 150.000</p>
@@ -52,12 +52,12 @@
                     </div>
                 </td>
       
-                <td>
+                <td class="table_td">
                     <div style="display: flex; flex-direction: column;">
                     <img class="img_xl_diesel" src="./assets/xl diesel.png" alt="Ford Ranger XLS 2.2 Diesel">
                     <div style="display: flex; flex-direction: row; justify-content: space-between;">
                     <div style="display: flex; justify-content: flex-start;">
-                    <input style="width: 30px;" type="checkbox"> 
+                    <input id="2" style="width: 30px;" type="checkbox"> 
                     <div style="display: flex; flex-direction: column; height: fit-content; margin-left: 10px;">
                     <p style="margin: 0; text-align: start;">Ford Ranger XLS 2.2 Diesel</p>
                     <p style="margin: 0; text-align: start;">R$ 180.000</p>
@@ -68,12 +68,12 @@
                     </div>
                 </td>
        
-                <td> 
+                <td class="table_td"> 
                     <div style="display: flex; flex-direction: column;">
                     <img  class="img_storm" src="./assets/storm.png" alt="Ford Ranger Storm">
                     <div style="display: flex; flex-direction: row; justify-content: space-between;">
                     <div style="display: flex; justify-content: flex-start;">
-                    <input style="width: 30px;" type="checkbox"> 
+                    <input id="3"  style="width: 30px;" type="checkbox"> 
                     <div style="display: flex; flex-direction: column; height: fit-content; margin-left: 10px;">
                     <p style="margin: 0; text-align: start;">Ford Ranger Storm</p>
                     <p style="margin: 0; text-align: start;">R$ 210.000</p>
@@ -85,8 +85,77 @@
                  </td>
             </tr>
         </table>
-        <a class="bttn_compare_cars">Comparar Carros</a>
+        <a onclick="comparemine()" class="bttn_compare_cars">Comparar Carros</a>
+        <div id="popup" style="display: none;">
+            <div id="popup-content">
+                <h2>Comparação dos veículos</h2>
+                <div>
+                    <table id="excel-style-table">
+                        <thead id="excel-style-thead">
+                            <tr id="excel-style-header-row">
+                                <th id="header-model" class="excel-style-header-cell">Especificação</th>
+                                <th id="vehicle1-modelo" class="excel-style-header-cell"></th>
+                                <th id="vehicle2-modelo" class="excel-style-header-cell"></th>
+                            </tr>
+                        </thead>
+                        <tbody id="excel-style-tbody">
+                            <tr id="row-2" class="excel-style-data-row">
+                                <td id="cell-2-1" class="excel-style-data-cell">Altura da Caçamba (mm)</td>
+                                <td id="vehicle1-alturaCacamba" class="excel-style-data-cell"></td>
+                                <td id="vehicle2-alturaCacamba" class="excel-style-data-cell"></td>
+                            </tr>
+                            <tr id="row-3" class="excel-style-data-row">
+                                <td id="cell-3-1" class="excel-style-data-cell">Altura do veículo (mm)</td>
+                                <td id="vehicle1-alturaVeiculo" class="excel-style-data-cell"></td>
+                                <td id="vehicle2-alturaVeiculo" class="excel-style-data-cell"></td>
+                            </tr>
+                            <tr id="row-4" class="excel-style-data-row">
+                                <td id="cell-4-1" class="excel-style-data-cell">Altura livre do solo (mm)</td>
+                                <td id="vehicle1-alturaSolo" class="excel-style-data-cell"></td>
+                                <td id="vehicle2-alturaSolo" class="excel-style-data-cell"></td>
+                            </tr>
+                            <tr id="row-5" class="excel-style-data-row">
+                                <td id="cell-5-1" class="excel-style-data-cell">Capacidade de carga (kg)</td>
+                                <td id="vehicle1-capacidadeCarga" class="excel-style-data-cell"></td>
+                                <td id="vehicle2-capacidadeCarga" class="excel-style-data-cell"></td>
+                            </tr>
+                            <tr id="row-6" class="excel-style-data-row">
+                                <td id="cell-6-1" class="excel-style-data-cell">Motor</td>
+                                <td id="vehicle1-motor" class="excel-style-data-cell"></td>
+                                <td id="vehicle2-motor" class="excel-style-data-cell"></td>
+                            </tr>
+                            <tr id="row-7" class="excel-style-data-row">
+                                <td id="cell-7-1" class="excel-style-data-cell">Potência (cv)</td>
+                                <td id="vehicle1-potencia" class="excel-style-data-cell"></td>
+                                <td id="vehicle2-potencia" class="excel-style-data-cell"></td>
+                            </tr>
+                            <tr id="row-8" class="excel-style-data-row">
+                                <td id="cell-8-1" class="excel-style-data-cell">Volume de caçamba (L)</td>
+                                <td id="vehicle1-volumeCacamba" class="excel-style-data-cell"></td>
+                                <td id="vehicle2-volumeCacamba" class="excel-style-data-cell"></td>
+                            </tr>
+                            <tr id="row-9" class="excel-style-data-row">
+                                <td id="cell-9-1" class="excel-style-data-cell">Roda</td>
+                                <td id="vehicle1-roda" class="excel-style-data-cell"></td>
+                                <td id="vehicle2-roda" class="excel-style-data-cell"></td>
+                            </tr>
+                            <tr id="row-10" class="excel-style-data-row">
+                                <td id="cell-10-1" class="excel-style-data-cell">Preço</td>
+                                <td id="vehicle1-preco" class="excel-style-data-cell"></td>
+                                <td id="vehicle2-preco" class="excel-style-data-cell"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <div style="text-align: center;padding-bottom: 20px;">
+                        <button  class="bttn_compare_cars" type="button" onclick="HideCompare()">Fechar</button>
+                    </div> 
+                </div>   
+            </div>
         </div>
+        </div>
+  
+
     </main>
 
     <footer>

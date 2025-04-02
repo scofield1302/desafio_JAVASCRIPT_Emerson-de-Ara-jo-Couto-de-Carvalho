@@ -10,7 +10,7 @@
     <link rel="icon" href="./assets/favicon.png"> 
 </head>
 <body>
-    
+    <script src="./js/form.js"></script>
     
     <header>
         <!-- No Header é adicionado a logo da Ford, os links com a tag nav, para que os navegadores entendam que se trata de itens de navegação e esses links são direcionados às páginas existentes no projeto, que são a Home (página inicial), Lançamento e contato. -->
@@ -23,7 +23,14 @@
     </header>
     <main>
         <!-- Foi criada uma div em row onde exibe uma imagem de um dos veículos de lançamento do lado esquerdo e do lado direito uma div com inputs num formulários de contato -->
-
+        <div id="popup-contact" style="display: none;">
+            <div id="popup-content-contact">
+                <a style="text-align: center; font-weight: bold;">Recebemos os seus dados</a>
+                <img src="./assets/letter.png" width="100px" height="100px"> 
+                <a id="msg_obrigado" style="text-align: justify; color: #555555;"></a>
+                <button onclick="closePopup()" style="color:#555555; width: 100%; height: 44px; background-color: #f5f8fa; border-style: none; cursor: pointer;">Voltar</button>
+            </div>
+        </div>
         <div class="groups_row_contatc">
             <img class="contact__image" src="./assets/storm.png" alt="Imagem Ford Ranger Storm">
             
@@ -31,15 +38,15 @@
                 <label class="contact__about_you">Sobre você</label>
                 <!-- Foi criado um formulário de contato com Inputs, mas além disso,  foram adicionadas labels que, embora sejam opcionais, acredita-se ser de muita relevância para a experiência do usuário, visto que se o mesmo preencher alguma(s) informação(ões) e depois se esquecer sobre o que era o input, a label ajuda-o a entender o que está preenchendo sem necessitar apagar o conteúdo. Além disso, também para facilitar o preenchimento e melhorar a U.X, foram adicionados placeholders nos inputs.
                 A lista de inputs e labels com informações para serem preenchidas no formulário de contado foi criada com tag ul -->
-            <form action="" method="post">
+            <form id="form-contact" action="" method="post">
                 <label>Nome</label>
                 <input type="text" id="Input_Name" class="input_format" placeholder="Informe o Seu Nome" required>
 
                 <label>E-mail</label>
-                <input type="email" class="input_format"  placeholder="Informe o Seu E-mail" required>
+                <input id="Input_Email" type="email" class="input_format"  placeholder="Informe o Seu E-mail" required>
 
                 <label>Telefone</label>
-                <input type="text" class="input_format"  placeholder="Informe o Seu Telefone" required>
+                <input id="Input_Telefone" type="text" class="input_format"  placeholder="Informe o Seu Telefone" required>
 
                 <label>Tipo de Contato</label>
                 <select class="dropdown_format">
@@ -50,10 +57,10 @@
                 </select>
 
                 <label>Mensagem</label>
-                <textarea class="multilineinput_format"></textarea required>
+                <textarea id="mensagem_contact" class="multilineinput_format"></textarea required>
             </form>
                 <!-- Por último, o botão que enviará a solicitação de contato do usuário à montadora. -->
-                <a class="bttn_send_message">Enviar</a>
+                <a onclick="Enviar()" class="bttn_send_message">Enviar</a>
                 
             </div>
         </div>
