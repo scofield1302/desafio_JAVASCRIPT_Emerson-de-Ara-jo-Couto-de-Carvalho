@@ -1,63 +1,36 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Ford do Brasil</title>
-    <!-- Puxa dinamicamente o arquivo CSS que estilizará o documento -->
+    <title>Home - Valor Direto - Orçamento Fácil</title>
     <link rel="stylesheet" href="./styles/styles.css">
-    <!-- Adiciona o mesmo Favicon da Ford -->
-    <link rel="icon" href="./assets/favicon.png"> 
 </head>
 <body>
-    <script src="./js/carousel.js"></script>   
 
     <header>
-        <!-- No Header é adicionado a logo da Ford, os links com a tag nav, para que os navegadores entendam que se trata de itens de navegação e esses links são direcionados às páginas existentes no projeto, que são a Home (página inicial), Lançamento e contato. -->
-
-        <img class="logo_ford" src="./assets/logo-ford-256.png" alt="Logo Ford">
-        <Nav class="header__links">
-        <a class="link_header" href="./index.html"style="font-weight: bold;">Home</a>
-        <a class="link_header" href="./lancamento.html">Lançamento</a>
-        <a class="link_header" href="./contato.html">Contato</a>
-        </Nav>
+        <div id="divMainHeader" class="divMainHeader">
+            <div id="divHeaderImageAndAppName" class="divHeaderImageAndAppName">
+                <img class="imageHeader" src="./assets/logo.png" alt="Logo Valor Direto">
+                <span>Orçamento Simples e Rápido</span>
+            </div>
+        </div>
     </header>
-    <main>        
-        <div id="carousel" class="div_carousel">
-        </div>
-        <div id="carousel-title">
-        </div>
-        <script>
-             //insert each image on carousel
-            carouselArr.push(new Carousel("imagem_1.jpg","Esta é a nova Ranger Ford 2022. Verifique novidades.","lancamento.html"));
-            carouselArr.push(new Carousel("imagem_2.jpg","Ford a nossa história","#"));
-            carouselArr.push(new Carousel("imagem_3.jpg","Nova Ford Bronco Sport 2022","lancamento.html"));
-            Carousel.Start(carouselArr);
-        </script>
 
+    <main>
+        <h1>Orçamento Simples e Rápido para Profissinais Liberais</h1>
+        <div id="mainInfoBudget" class="infoBudget1">
+            <span class="calltoAction1">Sua plataforma</span>
+            <span class="calltoAction1">Simples e Rápida</span>
+            <span class="calltoAction1" >Para<span id="typing" class="typing">emitir orçamentos</span></span>
+            <span class="calltoAction2">Gere orçamentos personalizados e profissionais em segundos - 100% grátis.</span>
+
+        </div>
     </main>
+
     <footer>
 
-        <div class="footer__socialNetwork_Logo"> <!-- div que terá as redes sociais + a logo da ford -->
-            <div class="footer__socialnetwork"> <!-- div que terá as redes sociais + a palavra Redes Sociais -->
-            <span class="text_socialNetwork">Redes Sociais</span>
-            <a href="https://www.facebook.com/FordBrasil/" target="_blank">
-                <img src="./assets/facebook-50.png" alt="Perfil no Facebook Ford do Brasil" width="35px"></a>
-            <a href="https://www.youtube.com/fordbrasil" target="_blank">
-                <img src="./assets/youtube-squared-50.png" alt="Canal no Youtube da Ford do Brasil" width="35px"></a>
-            <a href="https://www.instagram.com/fordbrasil/" target="_blank">
-                <img src="./assets/instagram-logo-50.png" alt="Perfil no Instagram da Ford do Brasil" width="35px"></a>
-            
-            </div>
-            
-        <p class="copyright">Copyright © 2025 Ford Motor Company - Todos os direitos reservados</p>
-        <img class="logo_ford" src="./assets/logo-ford-256.png" alt="Logo Ford">
-        </div>
-
-
-
     </footer>
-
-
+    <script src="./js/index.js"></script>
 </body>
 </html>
